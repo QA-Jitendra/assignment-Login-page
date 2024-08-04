@@ -1,5 +1,6 @@
 package com.assignmeent.browserconfiq;
 
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -12,6 +13,8 @@ public class AmountTest extends BaseClass {
 	HomeUtility hu;
 	LoginUtility lu;
 	SortUtility su;
+	
+	
 	@BeforeClass
 	public void browserOpen() {
 		openbrowser();
@@ -22,16 +25,19 @@ public class AmountTest extends BaseClass {
 	public void asssignmentTest() {
 		lu = new LoginUtility(driver);
 		hu = new HomeUtility(driver);
-		su = new SortUtility(driver);	
-	
+		su = new SortUtility(driver);
+		
 	lu.customerUsername();
 	lu.customerPassWord();
 	lu.clickLoginButton();
-	hu.clickamount();
-
     su.tableBeforsorting();
     su.clickOnAmountButton();
     su.tableAftersorting();
+    
+   
+
+
+   
 	
 	}
 	@AfterClass
